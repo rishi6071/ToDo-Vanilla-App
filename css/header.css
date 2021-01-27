@@ -49,7 +49,6 @@ input[type="search"]::placeholder {
     border-radius: 0;
     color: #37474f;
     border: 1px solid #37474f;
-    transition: 0.5s;
 }
 
 .search_btn:hover {

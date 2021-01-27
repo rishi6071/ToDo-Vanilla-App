@@ -9,7 +9,7 @@
     <meta name="description" content="To-Do App created using Vanilla Javascript" />
 
     <!-- Title Bar Icon -->
-    <title>To-Do Vanilla App</title>
+    <title>Magic Notes Vanilla App</title>
     <link rel="icon" type="image/ico" href="./img/brand_logo.png" />
 
     <!-- Bootstrap CSS CDN -->
@@ -18,14 +18,16 @@
 
     <!-- Custom CSS Stylesheets -->
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/noteField.css" />
+    <link rel="stylesheet" href="./css/savedNotes.css" />
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- || Header Start -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">
             <img src="./img/brand_logo.png" class="brand_logo" alt="Brand_Logo" />
-            <span class="brand_name">To-Do Vanilla</span>
+            <span class="brand_name">Magic Notes</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,6 +49,79 @@
             </form>
         </div>
     </nav>
+    <!-- || Header End -->
+
+
+    <!-- || CreateNote Field Start -->
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-10 offset-md-1 col-12">
+                    <form action="#" class="createnote_form">
+                        <h5 class="notefield_heading">Add a Note</h5>
+                        <div class="form-group">
+                            <textarea name="notefield" id="notefield" rows="5" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn px-4 addnote_btn">Add Note</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- || CreateNote Field End -->
+
+
+    <!-- || Saved Notes Start -->
+    <section>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-10 offset-md-1 col-12">
+                    <div class="row d-flex justify-content-center">
+                        <h4 class="saved_notes_heading">Your Notes</h4>
+                    </div>
+
+                    <div class="row saved_notes">
+                        <div class="col-md-4 col-sm-6 col-12 mt-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn delete_note_btn">Delete Note</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-12 mt-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn delete_note_btn">Delete Note</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-12 mt-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn delete_note_btn">Delete Note</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- || Saved Notes End -->
+
 
     <!-- Bootstrap JavaScript CDNs -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

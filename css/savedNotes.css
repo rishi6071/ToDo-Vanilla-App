@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+.saved_notes .card {
+  border-radius: 0;
+  border: none;
+  box-shadow: 0px 0px 4px rgba(128, 126, 126, 0.9);
+}
+
+.saved_notes .card-title,
+.delete_note_btn {
+  color: rgba(55, 71, 79, 1);
+  font-weight: 600;
+}
+
+.delete_note_btn {
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border: 1px solid rgba(55, 71, 79, 1);
+  border-radius: 0;
+}
+
+.delete_note_btn:hover {
+  background: rgba(55, 71, 79, 1);
+  color: white;
+}
+
+.saved_notes_heading {
+    color: darkslategray;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    margin: 20px 0 10px 15px;
+    font-weight: bold;
+    padding: 0 10px 3px 10px;
+    border-bottom: 5px solid rgba(55, 71, 79, 1);
+}
