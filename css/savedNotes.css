@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .saved_notes_heading {
     color: darkslategray;
@@ -32,4 +33,33 @@
 .delete_note_btn:hover {
   background: rgba(55, 71, 79, 1);
   color: white;
+}
+
+
+/**** Empty Notelist  */
+.empty_notelist {
+    text-align: center;
+    color: rgba(55, 71, 79, 1);
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+.empty_notelist_logo {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: 300px;
+}
+
+.empty_heading {
+    font-weight: bold;
+    color: rebeccapurple;
+    margin-top: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.empty_description {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
 }
