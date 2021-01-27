@@ -1,2 +1,58 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    box-shadow: 0px 2px 3px lightgrey;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.brand_logo {
+    width: 65px;
+    height: auto;
+    margin-left: 7px;
+}
+
+.brand_name {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #37474f;
+    padding-left: 8px;
+    transform: translateY(3.5px);
+}
+
+input[type="search"] {
+    width: 400px !important;
+    border-radius: 0;
+    border: 1px solid #37474f;
+}
+
+input[type="search"]::placeholder {
+    color: #37474f;
+}
+
+.search_btn {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 0;
+    color: #37474f;
+    border: 1px solid #37474f;
+    transition: 0.5s;
+}
+
+.search_btn:hover {
+    background: #37474f;
+    color: white;
+}
