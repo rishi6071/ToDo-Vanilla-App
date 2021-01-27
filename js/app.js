@@ -35,7 +35,7 @@ document.querySelector('.addnote_btn').addEventListener('click', (event) => {
         if (Array.isArray(notelist) == false)
             initial_note_id = 0;
 
-        // Adding a Note
+        // Adding a Note 
         const note_object = {
             id: notelist.length,
             title: note_title.value.trim(),
@@ -74,7 +74,6 @@ document.querySelector('.addnote_btn').addEventListener('click', (event) => {
 
     note_title.value = "";
     note_content.value = "";
-    console.log(notelist);
 });
 
 
@@ -83,6 +82,7 @@ document.querySelector('#clear_notelist').addEventListener('click', (event) => {
     event.preventDefault();
     document.querySelector('.saved_notes').innerHTML = "";
     localStorage.removeItem("notes");
+    emptyNotelist();
 });
 
 
@@ -113,8 +113,30 @@ const deleteNote = (delete_note_id) => {
         document.querySelector('.saved_notes').innerHTML = "";
         emptyNotelist();
     }
-    console.log(notelist);
 }
+
+
+// Search Note Functionality
+document.querySelector("#search_field").addEventListener('input', (event) => {
+    let request_value = event.target.value.toLowerCase();
+
+    // Emptying the Notes Box
+    const notes_box = document.querySelector(".saved_notes");
+    notes_box.innerHTML = "";
+
+    // Printing the Searched Notes
+    notelist.forEach((note, note_index, notes) => {
+        let [title, description] = [note.title.toLowerCase(), note.description.toLowerCase()];
+        if(title.includes(request_value) || description.includes(request_value)) {
+            noteCard(note.id, note.title, note.description);
+        }
+    });
+
+    // Checking that Result Found or Not
+    if(notes_box.innerHTML == "") {
+        noResultFound();
+    }
+});
 
 
 // Card for a Note
@@ -180,6 +202,26 @@ const emptyNotelist = () => {
 
     empty_note.append(empty_logo, empty_heading, empty_description);
     empty_grid.appendChild(empty_note);
-
     note_box.appendChild(empty_grid);
+}
+
+
+// No Results Found
+const noResultFound = () => {
+    const note_box = document.querySelector('.saved_notes');
+
+    const noResult_grid = document.createElement('div');
+    noResult_grid.className = "col-md-10 offset-md-1";
+
+    const noResult_note = document.createElement('div');
+    noResult_note.className = "no_result_found";
+
+    const noResult_logo = document.createElement('img');
+    noResult_logo.className = "no_result_found_logo";
+    noResult_logo.src = "./img/no_result_found.png";
+    noResult_logo.alt = "No Result Found";
+
+    noResult_note.appendChild(noResult_logo);
+    noResult_grid.appendChild(noResult_note);
+    note_box.appendChild(noResult_grid);
 }

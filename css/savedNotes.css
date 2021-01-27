@@ -36,15 +36,16 @@
 }
 
 
-/**** Empty Notelist  */
-.empty_notelist {
+/**** Empty Notelist & No Results Found  */
+.empty_notelist,
+.no_result_found {
     text-align: center;
     color: rgba(55, 71, 79, 1);
-    margin-top: -20px;
     margin-bottom: 50px;
 }
 
-.empty_notelist_logo {
+.empty_notelist_logo,
+.no_result_found_logo {
     display: block;
     margin: auto;
     max-width: 100%;

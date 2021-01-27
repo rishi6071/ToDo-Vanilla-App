@@ -35,12 +35,13 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0 ml-auto">
+            <form class="form-inline my-2 my-lg-0 ml-auto" autocomplete="off">
                 <!-- Search Field -->
-                <input class="form-control mr-sm-2" type="search" placeholder="Search a Note..." aria-label="Search" />
+                <input class="form-control mr-sm-2" type="search" id="search_field" name="search_field"
+                    placeholder="Search a Note..." aria-label="Search" />
 
                 <!-- Search Button -->
-                <button class="btn my-2 my-sm-0 px-4 search_btn" title="Search Note" type="submit">Search</button>
+                <button class="btn my-2 my-sm-0 px-4 search_btn" title="Search Note" type="button">Search</button>
 
                 <!-- Clear List Button -->
                 <button class="btn mx-3" title="Clear List" id="clear_notelist">
@@ -57,7 +58,7 @@
         <div class="container mt-3">
             <div class="row">
                 <div class="col-md-10 offset-md-1 col-12">
-                    <form action="#" class="createnote_form" method="POST">
+                    <form action="#" class="createnote_form" method="POST" autocomplete="off">
                         <h5 class="notefield_heading">Add a Note</h5>
                         <div class="form-group">
                             <input type="text" id="notefield_title" name="notefield_title" placeholder="Note Title..."
@@ -88,7 +89,7 @@
                         <h4 class="saved_notes_heading">Your Notes</h4>
                     </div>
 
-                    <div class="row saved_notes">
+                    <div class="row mb-5 saved_notes">
                     </div>
                 </div>
             </div>
@@ -106,7 +107,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Custom JS -->
-    <script src="./js/note.js" defer></script>
+    <script src="./js/app.js" defer></script>
 </body>
 
 </html>
