@@ -72,8 +72,7 @@ document.querySelector('.addnote_btn').addEventListener('click', (event) => {
         return false;
     }
 
-    note_title.value = "";
-    note_content.value = "";
+    [note_title.value, note_content.value] = ["", ""];
 });
 
 
